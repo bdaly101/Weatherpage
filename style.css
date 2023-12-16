@@ -1,0 +1,12 @@
+.fiveDayBox {
+    display: flex;
+    
+}
+
+.card {
+    color: white;
+    background-color: darkslategrey;
+    margin: 10px;
+    
+}
+
