@@ -1,12 +1,116 @@
-.fiveDayBox {
-    display: flex;
-    
-}
-
-.card {
-    color: white;
-    background-color: darkslategrey;
-    margin: 10px;
-    
-}
-
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* This is a light grey, you might need to adjust the color */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #343a40; /* Dark grey background for the header */
+    color: #ffffff; /* White text color */
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .cityBox, .weatherBox {
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Space between sections */
+    padding: 20px;
+  }
+  
+  .cityBox h2, .weatherBox .todayHead h2 {
+    color: #17a2b8; /* Adjust the color to match the theme */
+    margin-bottom: 15px;
+  }
+  
+  .cityList button {
+    display: block; /* Make buttons stack vertically */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for spacing */
+    margin: 5px 0; /* Margin for spacing between buttons */
+    border: none; /* No border for buttons */
+    background-color: #6c757d; /* Grey background for buttons */
+    color: #ffffff; /* White text color */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .cityList button:hover {
+    background-color: #5a6268; /* Slightly darker on hover */
+  }
+  
+  .citySearch {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px; /* Padding for spacing */
+    margin-bottom: 10px; /* Margin below the search box */
+    border: 2px solid #ced4da; /* Border color */
+  }
+  
+  #startBtn {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for spacing */
+    background-color: #007bff; /* Blue background for the search button */
+    color: #ffffff; /* White text color */
+    border: none; /* No border */
+    margin-bottom: 20px; /* Margin below the button */
+  }
+  
+  #startBtn:hover {
+    background-color: #0069d9; /* Slightly darker on hover */
+  }
+  
+  .todayBox, .fiveDayBox {
+    padding: 15px;
+  }
+  
+  .todayHead {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 15px;
+  }
+  
+  .todayHead h2 {
+    font-size: 1.5rem; /* Larger font size for the selected city */
+  }
+  
+  .currIcon {
+    height: 50px; /* Adjust size as needed */
+  }
+  
+  .fiveDayBox .card {
+    display: inline-block; /* Cards next to each other */
+    width: 18%; /* Adjust the width to fit five cards in a row */
+    margin-right: 1.25%; /* Space between cards */
+    background-color: #f8f9fa; /* Light grey background for cards */
+    padding: 10px; /* Padding for spacing */
+    text-align: center; /* Center the text */
+  }
+  
+  .fiveDayBox .card:last-child {
+    margin-right: 0; /* No margin for the last card */
+  }
+  
+  .card img {
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .card p {
+    margin: 5px 0; /* Spacing between text */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .fiveDayBox .card {
+      width: 48%; /* Adjust the width for smaller screens */
+      margin-right: 2%; /* Increase the space between cards */
+      margin-bottom: 10px; /* Space below the card */
+    }
+  
+    .fiveDayBox .card:nth-child(2n) {
+      margin-right: 0; /* No margin for every second card */
+    }
+  }
+  
